@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { IConfig } from './shared/demo.config';
 import { CONFIG_TOKEN } from './shared/demo.token';
+import { ProductModule } from './product/product.module';
 
 
 export const CONFIG_VALUE: IConfig = {
@@ -18,7 +19,8 @@ export const CONFIG_VALUE: IConfig = {
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ProductModule
   ],
   providers: [{
     provide: CONFIG_TOKEN, useValue: CONFIG_VALUE
