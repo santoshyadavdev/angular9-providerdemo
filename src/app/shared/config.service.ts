@@ -1,13 +1,13 @@
 import { Injectable, Inject } from '@angular/core';
-import { CONFIG_TOKEN } from './demo.token';
-import { IConfig } from './demo.config';
+import { configToken } from './demo.token';
+import { Config } from './demo.config';
 
 @Injectable({
   providedIn: 'any'
 })
 export class ConfigService {
 
-  constructor(@Inject(CONFIG_TOKEN) private config: IConfig) {
+  constructor(@Inject(configToken) private config: Config) {
     console.log('new instance is created');
   }
 

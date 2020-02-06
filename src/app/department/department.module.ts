@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { DepartmentRoutingModule } from './department-routing.module';
 import { DepartmentComponent } from './department.component';
-import { IConfig } from '../shared/demo.config';
-import { CONFIG_TOKEN } from '../shared/demo.token';
+import { Config } from '../shared/demo.config';
+import { configToken } from '../shared/demo.token';
 
-export const CONFIG_VALUE: IConfig = {
+export const configValue: Config = {
   apiEndPoint: 'xyz.com',
   timeout: 4000
 };
@@ -19,7 +19,7 @@ export const CONFIG_VALUE: IConfig = {
     DepartmentRoutingModule
   ],
   providers: [{
-    provide: CONFIG_TOKEN, useValue: CONFIG_VALUE
+    provide: configToken, useValue: configValue
   }]
 })
 export class DepartmentModule { }

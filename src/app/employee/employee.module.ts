@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
-import { CONFIG_TOKEN } from '../shared/demo.token';
-import { IConfig } from '../shared/demo.config';
+import { configToken } from '../shared/demo.token';
+import { Config } from '../shared/demo.config';
 
-export const CONFIG_VALUE: IConfig = {
+export const configValue: Config = {
   apiEndPoint: 'abc.com',
   timeout: 3000
 };
@@ -19,7 +19,7 @@ export const CONFIG_VALUE: IConfig = {
     EmployeeRoutingModule
   ],
   providers: [{
-    provide: CONFIG_TOKEN, useValue: CONFIG_VALUE
+    provide: configToken, useValue: configValue
   }]
 })
 export class EmployeeModule {

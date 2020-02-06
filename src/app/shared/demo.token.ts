@@ -1,4 +1,4 @@
 import { InjectionToken } from '@angular/core';
-import { IConfig } from './demo.config';
+import { Config } from './demo.config';
 
-export const CONFIG_TOKEN = new InjectionToken<any>('demo token');
+export const configToken = new InjectionToken<Config>('demo token');

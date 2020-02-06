@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IConfig } from './shared/demo.config';
-import { CONFIG_TOKEN } from './shared/demo.token';
+import { Config } from './shared/demo.config';
+import { configToken } from './shared/demo.token';
 import { ProductModule } from './product/product.module';
 
 
-export const CONFIG_VALUE: IConfig = {
+export const configValue: Config = {
   apiEndPoint: 'def.com',
   timeout: 5000
 };
@@ -23,7 +23,7 @@ export const CONFIG_VALUE: IConfig = {
     ProductModule
   ],
   providers: [{
-    provide: CONFIG_TOKEN, useValue: CONFIG_VALUE
+    provide: configToken, useValue: configValue
   }],
   bootstrap: [AppComponent]
 })

@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 
 import { ProductRoutingModule } from './product-routing.module';
 import { ProductComponent } from './product.component';
-import { IConfig } from '../shared/demo.config';
-import { CONFIG_TOKEN } from '../shared/demo.token';
+import { Config } from '../shared/demo.config';
+import { configToken } from '../shared/demo.token';
 
-export const CONFIG_VALUE: IConfig = {
+export const configValue: Config = {
   apiEndPoint: 'edf.com',
   timeout: 5000
 };
@@ -18,7 +18,7 @@ export const CONFIG_VALUE: IConfig = {
     ProductRoutingModule
   ],
   providers: [{
-    provide: CONFIG_TOKEN, useValue: CONFIG_VALUE
+    provide: configToken, useValue: configValue
   }]
 })
 export class ProductModule { }
