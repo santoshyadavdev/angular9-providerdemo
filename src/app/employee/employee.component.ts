@@ -8,10 +8,12 @@ import { ConfigService } from '../shared/config.service';
 })
 export class EmployeeComponent implements OnInit {
 
+  values: any;
+
   constructor(private configService: ConfigService) { }
 
   ngOnInit(): void {
-    console.log(this.configService.getValue());
+    this.values =this.configService.getValue();
   }
 
 }
